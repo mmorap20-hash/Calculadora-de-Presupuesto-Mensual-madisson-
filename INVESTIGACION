@@ -1,0 +1,33 @@
+# Investigación: Markdown en Proyectos de Software
+
+## 1. ¿Qué es Markdown y por qué se utiliza en proyectos de software?
+
+### Definición
+Markdown es un **lenguaje de marcado ligero** (markup language) que permite dar formato a texto plano. Su principal objetivo es ser sumamente **fácil de leer y escribir** para los humanos, utilizando una sintaxis minimalista (como asteriscos para negritas, o almohadillas para títulos). Una vez escrito, puede ser convertido a formatos más complejos, siendo el más común el **HTML**.
+
+### Uso en Proyectos de Software
+Se utiliza porque:
+* **Legibilidad en Código Fuente:** La documentación en Markdown es legible directamente en el editor de texto, lo cual es ideal para el desarrollo.
+* **Control de Versiones (Git/GitHub):** Al ser texto plano, Git maneja los cambios (*diffs*) de Markdown de manera muy eficiente y precisa, facilitando la auditoría y el versionado de la documentación técnica.
+* **Documentación Estándar:** Es el formato universal para archivos clave como `README.md`, wikis y documentación de *issues* en la mayoría de las plataformas de repositorios.
+
+## 2. Ejemplo práctico de uso de Markdown
+
+A continuación, se muestra la sintaxis de los elementos básicos:
+
+| Elemento | Sintaxis Markdown | Descripción |
+| :--- | :--- | :--- |
+| **Encabezados** | `# Título 1` o `## Título 2` | Define la jerarquía y estructura del documento. |
+| **Listas (no ordenadas)** | `* Primer ítem` | Utilizado para enumerar requisitos, pasos o *to-dos*. |
+| **Tablas** | `| Col 1 | Col 2 |` y `|:---|:---|` | Organiza y compara datos de forma tabular. |
+| **Énfasis** | `**Negrita**` o `*Cursiva*` | Resalta información clave o términos importantes. |
+| **Enlaces** | `[Texto Enlace](URL)` | Crea hipervínculos para referencias externas o internas. |
+| **Imágenes** | `![Descripción](ruta/imagen.png)` | Incrusta imágenes para guías visuales (ej. diagramas). |
+
+## 3. Ventajas de utilizar Markdown en combinación con GitHub
+
+La integración de Markdown con GitHub es un pilar fundamental en la documentación de proyectos de software:
+
+* **Renderizado de `README.md`:** GitHub renderiza automáticamente el `README.md` para que sea la página de inicio del repositorio, ofreciendo una vista profesional y estructurada del proyecto de inmediato.
+* **Trazabilidad Documental Simplificada:** La naturaleza de texto plano de Markdown permite que Git y GitHub muestren exactamente qué líneas fueron añadidas o eliminadas en la documentación entre cada *commit* (evidencia de `versionado_docs.png`).
+* **Comunicación Estructurada:** Permite a los desarrolladores utilizar formato de texto (listas, bloques de código, negritas) dentro de los **comentarios de Issues y Pull Requests**, mejorando la claridad de la comunicación técnica.
