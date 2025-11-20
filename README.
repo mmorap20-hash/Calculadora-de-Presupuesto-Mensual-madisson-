@@ -1,0 +1,45 @@
+Calculadora-de-Presupuesto-Mensual: Mantenimiento de Software
+
+[cite_start]Este repositorio documenta el análisis y la propuesta de mantenimiento de software para la aplicación **Calculadora de Presupuesto Mensual**[cite: 57, 58, 59]. El objetivo es aplicar los principios de la ingeniería de software para mejorar su fiabilidad y adaptabilidad.
+
+ Descripción del Caso y Objetivos
+
+[cite_start]La Calculadora es una herramienta para registrar ingresos y gastos, calcular el balance general, y generar un informe financiero detallado[cite: 59, 60, 61].
+
+Situaciones Problemáticas Detectadas
+
+1.  [cite_start]**Inconsistencias en el Cálculo:** Errores generados por el ingreso de datos incompletos, negativos o duplicados[cite: 96, 97].
+2.  [cite_start]**Falta de Persistencia de Datos:** Pérdida de registros al cerrar la aplicación por carecer de un mecanismo de guardado robusto[cite: 105, 106].
+3.  [cite_start]**Adaptación Limitada:** El sistema fue diseñado solo para uso en escritorio[cite: 117].
+
+---
+ Requerimientos y Mantenimiento Propuesto
+
+[cite_start]La propuesta de mantenimiento abarca los tres enfoques necesarios para resolver las problemáticas detectadas[cite: 179]:
+
+| Tipo de Mantenimiento | Requerimiento Funcional Clave | Descripción |
+| :--- | :--- | :--- |
+| **Correctivo** | **RF-05: Validación de Datos** | [cite_start]Implementar validaciones para que los montos sean numéricos y positivos, evitando errores de cálculo[cite: 103, 135]. |
+| **Preventivo** | **RF-06: Almacenamiento Persistente** | [cite_start]Incorporar una base de datos local (ej. SQLite) para conservar los datos entre sesiones[cite: 115, 144]. |
+| **Adaptativo** | **RNF-04: Multiplataforma (PWA)** | [cite_start]Desarrollar una Versión Web Progresiva (PWA) con diseño responsive para acceso desde móviles y tablets[cite: 121, 162]. |
+
+---
+
+ Tabla de Pruebas Funcionales (Resumen)
+
+El plan completo se encuentra en `/pruebas/PlanPruebas.docx`. Este resumen muestra los casos diseñados para validar las nuevas funcionalidades y correcciones:
+
+| ID de Prueba | Requerimiento | Resultado Esperado | Validación |
+| :--- | :--- | :--- | :--- |
+| **PC-001** | RF-05 | El sistema debe **rechazar** el registro de un monto negativo y mostrar un mensaje de advertencia. | Éxito si bloquea y advierte. |
+| **PC-003** | RF-06 | Los registros y el Balance Total deben estar disponibles y sin cambios al reabrir la aplicación. | Éxito si los datos persisten. |
+
+---
+
+ Reflexión sobre el Control de Versiones
+
+El uso de **Git y GitHub** para la documentación técnica (documentos de requerimientos, planes de pruebas, propuestas) es fundamental porque:
+
+1.  **Trazabilidad:** Permite rastrear la evolución de los entregables (ej. de DRS v1 a DRS v2), justificando los cambios mediante los mensajes de *commit*.
+2.  **Respaldo y Recuperación:** Asegura que si se introduce un error en una versión de la documentación, se puede revertir fácilmente al estado anterior sin perder el trabajo.
+3.  **Eficiencia:** El uso de **Markdown** para archivos como este `README.md` y la propuesta de mantenimiento facilita que Git muestre las diferencias (*diffs*) de forma clara y concisa.
