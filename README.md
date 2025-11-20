@@ -1,4 +1,4 @@
-Calculadora-de-Presupuesto-Mensual-madisson-
+
 Calculadora-de-Presupuesto-Mensual
 
 [cite_start]Este repositorio documenta el análisis y la propuesta de mantenimiento de software para la aplicación **Calculadora de Presupuesto Mensual** [cite: 57][cite_start], la cual está diseñada para gestionar las finanzas personales registrando ingresos y gastos para calcular el balance general[cite: 59, 60].
